@@ -49,7 +49,7 @@ router.post("/addBooking", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const bookings = await Booking.find();
+    const bookings = await Booking.find({});
     console.log("backend here");
     res.status(200).json(bookings);
   } catch (error) {
